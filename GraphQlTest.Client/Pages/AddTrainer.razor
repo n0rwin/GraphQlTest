@@ -1,0 +1,26 @@
+﻿@page "/add-trainer"
+@using GraphQlTest.Client.GraphQlClient
+@inject PokemonClient PokemonClient
+
+<PageTitle>Trainer</PageTitle>
+
+<h1>Add Trainer</h1>
+
+<label for="newTrainerName">Name:</label>
+<input id="newTrainerName" type="text" @bind="_trainerName"/>
+
+<label for="newTrainerBadges">Nr of badges:</label>
+<input id="newTrainerBadges" type="number" @bind="_nrOfBadges"/>
+
+<button @onclick="OnAddTrainerClick">Add Trainer</button>
+
+@code {
+    private string _trainerName = "";
+    private int _nrOfBadges = 0;
+
+    private async Task OnAddTrainerClick()
+    {
+        // TODO
+    }
+
+}

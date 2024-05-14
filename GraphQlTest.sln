@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQlTest.Api", "GraphQlTest.Api\GraphQlTest.Api.csproj", "{A64EF789-9AFF-458A-B3B7-95D8A3FE3861}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQlTest.Client", "GraphQlTest.Client\GraphQlTest.Client.csproj", "{62352137-FA24-490B-B3B2-36C283CEE0DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A64EF789-9AFF-458A-B3B7-95D8A3FE3861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A64EF789-9AFF-458A-B3B7-95D8A3FE3861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A64EF789-9AFF-458A-B3B7-95D8A3FE3861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A64EF789-9AFF-458A-B3B7-95D8A3FE3861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62352137-FA24-490B-B3B2-36C283CEE0DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62352137-FA24-490B-B3B2-36C283CEE0DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62352137-FA24-490B-B3B2-36C283CEE0DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62352137-FA24-490B-B3B2-36C283CEE0DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

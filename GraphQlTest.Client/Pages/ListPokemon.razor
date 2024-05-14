@@ -1,0 +1,26 @@
+﻿@page "/"
+@using GraphQlTest.Client.GraphQlClient
+@inject PokemonClient PokemonClient
+
+<PageTitle>Pokemon</PageTitle>
+
+<h1>List of Pokemon</h1>
+
+<ul>
+@foreach (var p in _pokemons)
+{
+    <li>@p.Name - @p.Type - @p.Level</li>
+}
+</ul>
+
+@code {
+
+    private IReadOnlyList<IGetPokemon_Pokemon> _pokemons = [];
+
+    protected override async Task OnInitializedAsync()
+    {
+        var res = await PokemonClient.GetPokemon.ExecuteAsync();
+        _pokemons = res.Data?.Pokemon ?? [];
+    }
+
+}

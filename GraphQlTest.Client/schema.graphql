@@ -1,0 +1,109 @@
+schema {
+  query: Queries
+}
+
+type Queries {
+  pokemonByName(name: String!): Pokemon
+  pokemon(where: PokemonFilterInput order: [PokemonSortInput!]): [Pokemon!]!
+}
+
+input PokemonFilterInput {
+  and: [PokemonFilterInput!]
+  or: [PokemonFilterInput!]
+  name: StringOperationFilterInput
+  type: PokeTypeOperationFilterInput
+  level: IntOperationFilterInput
+  hp: IntOperationFilterInput
+  attack: IntOperationFilterInput
+  defense: IntOperationFilterInput
+  specialAttack: IntOperationFilterInput
+  specialDefense: IntOperationFilterInput
+  speed: IntOperationFilterInput
+}
+
+input PokemonSortInput {
+  name: SortEnumType
+  type: SortEnumType
+  level: SortEnumType
+  hp: SortEnumType
+  attack: SortEnumType
+  defense: SortEnumType
+  specialAttack: SortEnumType
+  specialDefense: SortEnumType
+  speed: SortEnumType
+}
+
+input StringOperationFilterInput {
+  and: [StringOperationFilterInput!]
+  or: [StringOperationFilterInput!]
+  eq: String
+  neq: String
+  contains: String
+  ncontains: String
+  in: [String]
+  nin: [String]
+  startsWith: String
+  nstartsWith: String
+  endsWith: String
+  nendsWith: String
+}
+
+input PokeTypeOperationFilterInput {
+  eq: PokeType
+  neq: PokeType
+  in: [PokeType!]
+  nin: [PokeType!]
+}
+
+input IntOperationFilterInput {
+  eq: Int
+  neq: Int
+  in: [Int]
+  nin: [Int]
+  gt: Int
+  ngt: Int
+  gte: Int
+  ngte: Int
+  lt: Int
+  nlt: Int
+  lte: Int
+  nlte: Int
+}
+
+enum SortEnumType {
+  ASC
+  DESC
+}
+
+enum PokeType {
+  NORMAL
+  FIRE
+  WATER
+  ELECTRIC
+  GRASS
+  ICE
+  FIGHTING
+  POISON
+  GROUND
+  FLYING
+  PSYCHIC
+  BUG
+  ROCK
+  GHOST
+  DRAGON
+  DARK
+  STEEL
+  FAIRY
+}
+
+type Pokemon {
+  name: String!
+  type: PokeType!
+  level: Int!
+  hp: Int!
+  attack: Int!
+  defense: Int!
+  specialAttack: Int!
+  specialDefense: Int!
+  speed: Int!
+}
